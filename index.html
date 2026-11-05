@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Undangan digital acara wisuda.">
+  <title>Undangan Acara Wisuda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <main>
+    <section class="cover" id="cover">
+      <div class="cover-frame">
+        <p class="eyebrow">UNDANGAN SPESIAL</p>
+        <div class="ornament">✦</div>
+        <h1><br><em>Hari</em><br>Wisuda</h1>
+        <p class="cover-subtitle">Sebuah Momen Untuk Merayakan<br>Perjalanan Dedikasi dan Mimpi.</p>
+        <div class="gold-line"></div>
+        <p class="recipient-intro">Kepada Yth.</p>
+        <h2 class="recipient-name" id="coverRecipient">Tamu Undangan</h2>
+        <button class="primary-btn" id="openInvitation" type="button">Buka Undangan <span>↗</span></button>
+        <p class="small-note">Dengan penuh hormat, kami mengundang Anda.</p>
+      </div>
+      <div class="cover-corner corner-tl"></div><div class="cover-corner corner-br"></div>
+    </section>
+    <section class="invitation hidden" id="invitation">
+      <header class="topbar">
+        <span class="brand-mark">✦</span>
+        <span>GRADUATION INVITATION</span>
+        <button class="music-toggle" id="musicToggle" type="button" aria-label="Putar atau jeda musik">♫ <span id="musicLabel">Musik</span></button>
+      </header>
+
+      <section class="hero section-pad">
+        <p class="eyebrow">BABAK BARU TELAH DIMULAI</p>
+        <div class="hero-emblem">✦</div>
+        <h2>Satu Perjalanan Berakhir,<br><em>Dan Akan Memulai Jalan Yang Baru.</em></h2>
+        <p class="lead">Dengan rasa syukur dan kebahagiaan, Saya mengundang Anda untuk hadir dan menjadi bagian dari momen istimewa Saya.</p>
+        <div class="gold-line"></div>
+        <p class="to-label">Kepada Yth.</p>
+        <h3 id="mainRecipient">Tamu Undangan</h3>
+      </section>
+
+      <section class="graduate section-pad">
+        <p class="eyebrow">Lulusan</p>
+        <div class="portrait-wrap">
+          <img id="graduatePhoto" src="assets/images/wisudawan.jpeg" alt="Foto wisudawan" onerror="this.style.display='none';document.getElementById('photoFallback').style.display='grid'">
+          <div class="photo-fallback" id="photoFallback">✦</div>
+        </div>
+        <h2 id="graduateName">BAGAS ADITYA SILALAHI</h2>
+        <p class="degree" id="graduateDegree">Sarjana Komputer (S.Kom)</p>
+        <p class="degree university" id="graduateUniversity">STMIK Methodist Binjai</p>
+        <p class="graduate-quote">“Topi wisuda bukan hanya simbol akademis, tetapi juga lambang perjalanan inspiratifmu”</p>
+      </section>
+
+      <section class="event section-pad">
+        <p class="eyebrow">DITUNGGU KEHADIRANNYA</p>
+        <h2>Save The <em>Date</em></h2>
+        <p class="event-intro">Merupakan suatu kehormatan bagi Saya apabila Anda berkenan hadir dalam acara wisuda yang akan diselenggarakan pada:</p>
+        <div class="date-card">
+          <span class="date-day" id="eventDay">SABTU</span>
+          <strong id="eventDate">07</strong>
+          <span class="date-month" id="eventMonthYear">NOVEMBER 2026</span>
+          <div class="gold-line"></div>
+          <p id="eventTime">Pukul 08.00 WIB – selesai</p>
+        </div>
+        <div class="event-details">
+          <div class="detail-item"><span class="detail-icon">⌖</span><div><h3>LOKASI ACARA</h3><p id="eventVenue">Nama Gedung / Tempat Acara</p><small id="eventAddress">Alamat lengkap lokasi acara</small></div></div>
+          <div class="detail-item"><span class="detail-icon">◷</span><div><h3>WAKTU</h3><p id="eventTimeDetail">08.00 WIB – selesai</p><small id="eventDateDetail">Sabtu, 07 November 2026</small></div></div>
+        </div>
+        <a class="outline-btn" id="mapsButton" href="#" target="_blank" rel="noopener">Buka Lokasi Google Maps ↗</a>
+      </section>
+
+      <section class="countdown-section section-pad">
+        <p class="eyebrow">Menghitung Waktu Momen</p>
+        <h2>See You <em Soon</em></h2>
+        <div class="countdown" aria-label="Hitung mundur menuju acara">
+          <div><strong id="days">00</strong><span>HARI</span></div>
+          <div><strong id="hours">00</strong><span>JAM</span></div>
+          <div><strong id="minutes">00</strong><span>MENIT</span></div>
+          <div><strong id="seconds">00</strong><span>DETIK</span></div>
+        </div>
+      </section>
+
+      <footer class="footer section-pad">
+        <div class="ornament">✦</div>
+        <h2>Terima <em>Kasih </em></h2>
+        <p>Merupakan kebahagiaan bagi Saya apabila Anda berkenan hadir dan memberikan dukungan.</p>
+        <p class="footer-signature">Hormat Saya,<br><strong id="footerGraduate">Nama Wisudawan</strong></p>
+        <div class="gold-line"></div>
+        <small>© <span id="year"></span>Undangan Wisuda</small>
+      </footer>
+    </section>
+  </main>
+  <audio id="backgroundMusic" src="assets/music/backsound.mp3" loop preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
